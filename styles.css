@@ -1,0 +1,198 @@
+body{
+  font-family: 'Manrope', sans-serif;
+  font-size: 13px;
+  background-color: hsl(210, 46%, 95%);
+  color: hsl(217, 19%, 35%);
+}
+
+h2{
+  margin: 0;
+  font-weight: 500;
+}
+
+p{
+  color: hsl(214, 17%, 51%);
+  line-height: 1.5;
+}
+
+.main-box{
+  height: 280px;
+  width: 730px;
+  margin: 15% auto;
+  border-radius: 10px;
+  display: flex;
+  box-shadow: 1px 1px 20px hsl(212, 23%, 69%);
+}
+
+.box-left{
+  width: 40%;
+  border-radius: 10px 0 0 10px;
+  overflow: hidden;
+}
+
+.box-right{
+  width: 60%;
+  background-color: white;
+  border-radius: 0 10px 10px 0;
+  padding: 40px 40px 20px;
+}
+
+.left-img{
+  height: 100%;
+}
+
+.bottom-row{
+  display: flex;
+}
+
+.avatar{
+  width: 15%;
+}
+.avatar-img{
+  width: 80%;
+  border-radius: 50%;
+}
+
+.name-date{
+  width: 75%;
+  margin: auto;
+}
+
+.name{
+  margin: auto;
+  color: hsl(217, 19%, 35%);
+}
+.date{
+  margin: auto;
+}
+
+.share{
+  margin: auto;
+  text-align: right;
+  position: relative;
+  display: inline-block;
+}
+.share-button{
+  background-color: hsl(210, 46%, 95%);
+  border-radius: 60px;
+  padding: 0.5em 0.6em;
+  border: none;
+}
+
+.share-button:focus {
+  outline:0;
+}
+
+.share-button.dark {
+  background-color: hsl(217, 19%, 35%);
+}
+
+.share-img.hidden {
+  display: none;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  height: 50px;
+  background-color: hsl(217, 19%, 35%);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -135px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 30px;
+}
+
+.tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  border-width: 5px;
+  border-style: solid;
+  border-color: hsl(217, 19%, 35%) transparent transparent transparent;
+}
+
+.tooltipshow {
+  visibility: visible;
+}
+
+.box-mobile{
+  display: none;
+  background-color: hsl(217, 19%, 35%);
+  color: white;
+}
+
+@media only screen and (max-width: 875px){
+  .main-box{
+    height: auto;
+    width: 90%;
+    margin: 20% auto;
+    border-radius: 10px;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .box-left{
+    width: 100%;
+    height: 200px;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .box-right{
+    width: 100%;
+    border-radius: 0;
+    box-sizing: border-box;
+  }
+
+  .left-img{
+    width: 100%;
+    height: auto;
+  }
+
+  .tooltiptext{
+    display: none;
+  }
+
+  .box-mobile.show{
+    display: flex;
+    margin-top: -20px;
+  }
+
+  .share-mobile{
+    width: 90%;
+    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .share-mobile-button{
+    width: 10%;
+    text-align: right;
+    padding: 20px 40px;
+  }
+
+  .bottom-row.hide{
+    display: none;
+  }
+
+  .share-button.dark {
+    background-color: hsl(214, 17%, 51%, 0.5);
+  }
+
+}
